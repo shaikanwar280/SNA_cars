@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SNA Travels | Travel Agency</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #f5f5f5;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #111;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Welcome Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(
+                rgba(0,0,0,0.55),
+                rgba(0,0,0,0.55)
+            ),
+            url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffcc00;
+            color: #111;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* Cars Section */
+        .cars-section {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .cars-section h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .cars-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .car-card {
+            background: white;
+            width: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .car-content {
+            padding: 25px;
+        }
+
+        .car-content h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 25px;
+            font-weight: bold;
+            color: #e09b00;
+            margin: 15px 0;
+        }
+
+        .car-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 8%;
+            text-align: center;
+            background: #111;
+            color: white;
+        }
+
+        .contact h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+
+            .car-card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SNA</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Welcome Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Welcome to SNA</h1>
+
+            <p>
+                Your Journey, Our Responsibility
+            </p>
+
+            <a href="#cars" class="btn">
+                Explore Our Cars
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cars Section -->
+    <section class="cars-section" id="cars">
+
+        <h2>Our Cars</h2>
+
+        <p class="section-description">
+            Comfortable and reliable cars for your journey
+        </p>
+
+        <div class="cars-container">
+
+            <!-- Innova -->
+            <div class="car-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80"
+                    alt="Innova Car"
+                >
+
+                <div class="car-content">
+
+                    <h3>Toyota Innova</h3>
+
+                    <p>
+                        Spacious and comfortable car suitable for
+                        family trips, tours and long-distance travel.
+                    </p>
+
+                    <div class="price">
+                        ₹12 / KM
+                    </div>
+
+                    <a href="#contact" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Etios -->
+            <div class="car-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80"
+                    alt="Etios Car"
+                >
+
+                <div class="car-content">
+
+                    <h3>Toyota Etios</h3>
+
+                    <p>
+                        Comfortable and economical car for city trips,
+                        airport travel and long journeys.
+                    </p>
+
+                    <div class="price">
+                        ₹12 / KM
+                    </div>
+
+                    <a href="#contact" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About SNA</h2>
+
+        <p>
+            SNA is a simple and reliable travel service providing
+            comfortable cars for local and long-distance journeys.
+            Our goal is to make your travel safe, comfortable and
+            affordable.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Book Your Journey</h2>
+
+        <p>
+            Contact SNA Travels today and plan your next trip.
+        </p>
+
+        <a href="tel:+919999999999" class="btn">
+            Call Now
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 SNA Travels. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
