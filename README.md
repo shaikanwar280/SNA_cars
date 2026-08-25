@@ -10,4 +10,4 @@ This project helps users manage tasks easily.
 
 ## Screenshot
 
-![image](�PNG)
+![image](pic.png)
