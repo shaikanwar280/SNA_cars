@@ -10,4 +10,4 @@ This project helps users manage tasks easily.
 
 ## Screenshot
 
-![Project screenshot](https://github.com/user-attachments/assets/your-image-id)
+pic
